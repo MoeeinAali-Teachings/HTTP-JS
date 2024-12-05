@@ -253,13 +253,16 @@ axios.get(url)
 
 ```js
 const url = 'https://jsonplaceholder.typicode.com/posts';
+const headers = {
+    'Content-Type':'Application/json'
+}
 const data = {
   title: 'New Post',
   body: 'This is a new post.',
   userId: 1,
 };
 
-axios.post(url, data)
+axios.post(url, data, headers)
   .then(response => console.log('Created:', response.data))
   .catch(error => console.error('Error:', error));
 ```
@@ -324,3 +327,4 @@ axios.post(url, data)
 - **Ease of Use**: Intuitive interface with minimal setup.
 - **Efficiency**: Saves time with reusable collections and environments.
 - **Integration**: Works seamlessly with CI/CD pipelines and version control.
+
